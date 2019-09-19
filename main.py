@@ -10,9 +10,8 @@ import os
 import datetime
 from Config.Config import Config
 from DCGAN.DCGAN import DCGAN
-from ImageGenerator.ImageGenerator import ImageGenerator
 
-class CartooncFaceConfig(Config):
+class MnistConfig(Config):
 
     def __init__(self):
         #super(Config, self).__init__()
@@ -30,8 +29,7 @@ def run_main():
     """
        这是主函数
     """
-    cfg = CartooncFaceConfig()
-    #train_datagen = ImageGenerator(cfg.dataset_path,cfg.batch_size)
+    cfg =  MnistConfig()
     dcgan = DCGAN(cfg)
     dcgan.train(20,cfg.batch_size)
 
