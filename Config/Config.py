@@ -22,21 +22,24 @@ class Config(object):
 
         self.epoch = 100000
         self.batch_size = 256
-        self.save_interval = 50
+        self.save_interval = 1
 
         self.save_weight_dir = os.path.abspath("./model")
         if not os.path.exists(self.save_weight_dir):
             os.mkdir(self.save_weight_dir)
         self.dataset_path = os.path.abspath("./faces")
-        self.result_path = os.path.abspath("./result")
-        if not os.path.exists(self.result_path):
-            os.mkdir(self.result_path)
+        self.train_result_path = os.path.abspath("./train_result")
+        if not os.path.exists(self.train_result_path):
+            os.mkdir(self.train_result_path)
+        self.test_result_path = os.path.abspath("./test_result")
+        if not os.path.exists(self.test_result_path):
+            os.mkdir(self.test_result_path)
 
     def get_save_weight_dir(self):
         return self.save_weight_dir
 
     def get_result_path(self):
-        return self.result_path
+        return self.train_result_path
 
 def run_main():
     """
