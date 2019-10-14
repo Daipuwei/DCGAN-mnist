@@ -6,11 +6,11 @@
  3. keras2.2.4 
  4. opencv3.4.5.20
 
-# 运行流程
+# 训练运行流程
 在命令行运行如下命令：
 
 ```
-python main.py
+python train.py
 ```
 结果存放在子目录的result文件夹中。下面是训练结果：
 
